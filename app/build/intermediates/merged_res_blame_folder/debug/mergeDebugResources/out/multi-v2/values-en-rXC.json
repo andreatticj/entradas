@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.entradas2.app-mergeDebugResources-37:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.example.entradas2.app-mergeDebugResources-36:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "/home/andrea/.gradle/caches/8.9/transforms/ae1e8ad4dfa6515f08347f1ccbe3f600/transformed/appcompat-1.7.0/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/home/andrea/.gradle/caches/8.9/transforms/8c5952c4b29bbc60a60a4d1095cf9143/transformed/appcompat-1.7.0/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/andrea/.gradle/caches/8.9/transforms/594b823b4cdef9446599a3e68176ae6d/transformed/core-1.15.0/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/home/andrea/.gradle/caches/8.9/transforms/63af8e4c41d4843e305ba91108714904/transformed/core-1.15.0/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

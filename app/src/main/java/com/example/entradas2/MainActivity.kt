@@ -9,6 +9,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -54,16 +55,25 @@ class MainActivity : AppCompatActivity() {
 
         // Configurar el botón "Play" para iniciar el monitoreo
         btnPlay.setOnClickListener {
-            semaforo = "V" // Activar el semáforo
-            val sharedPreferences = getSharedPreferences("WebCheckerPrefs", MODE_PRIVATE)
-            sharedPreferences.edit().putString("semaforo", semaforo).apply()
+            // Verificar si la URL y la palabra clave no están vacías
+            val url = urlField.text.toString().trim()
+            val word = wordField.text.toString().trim()
 
-            // Cancelar cualquier trabajo previo y programar uno nuevo
+            if (url.isEmpty() || word.isEmpty()) {
+                // Mostrar un mensaje de error si alguno de los campos está vacío
+                Toast.makeText(this, "Por favor ingrese una URL y una palabra clave", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Usar el DatabaseHelper para guardar los datos
+            val databaseHelper = DatabaseHelper(this)
+            databaseHelper.saveConfig(url, word, "V") // Guardar la URL, la palabra y el semáforo como "V" (activo)
+
+            // Iniciar el monitoreo y cancelar trabajos previos
             WorkManager.getInstance(this).cancelAllWorkByTag(workTag)
             val workRequest = PeriodicWorkRequestBuilder<WebCheckerWorker>(15, TimeUnit.MINUTES)
                 .addTag(workTag)
                 .build()
-
             WorkManager.getInstance(this).enqueue(workRequest)
         }
 

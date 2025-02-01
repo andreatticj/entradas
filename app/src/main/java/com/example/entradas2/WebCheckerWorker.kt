@@ -21,20 +21,42 @@ class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) :
 
     override fun doWork(): Result {
         try {
-            // Obtener las preferencias compartidas para acceder a la URL, la palabra clave y el semáforo
-            val sharedPreferences =
-                applicationContext.getSharedPreferences("WebCheckerPrefs", Context.MODE_PRIVATE)
-            val semaforo = sharedPreferences.getString("semaforo", null) ?: return Result.failure()
+            // Obtener la configuración desde la base de datos
+            val databaseHelper = DatabaseHelper(applicationContext)
+            val cursor = databaseHelper.getConfig()
+
+// Verifica si el cursor tiene al menos una fila
+            if (cursor.count == 0) {
+                cursor.close()
+                return Result.failure()
+            }
+
+            cursor.moveToFirst()
+
+// Verificar si las columnas existen usando getColumnIndex
+            val urlIndex = cursor.getColumnIndex(DatabaseHelper.COL_URL)
+            val wordIndex = cursor.getColumnIndex(DatabaseHelper.COL_WORD)
+            val semaforoIndex = cursor.getColumnIndex(DatabaseHelper.COL_SEMAFORO)
+
+// Comprobar si las columnas existen
+            if (urlIndex == -1 || wordIndex == -1 || semaforoIndex == -1) {
+                cursor.close()
+                return Result.failure()  // Si alguna columna no existe, devuelve un fallo
+            }
+
+// Ahora que las columnas son válidas, obtenemos los valores
+            val url = cursor.getString(urlIndex)
+            val word = cursor.getString(wordIndex)
+            val semaforo = cursor.getString(semaforoIndex)
+
+            cursor.close()
+
 
             // Verificar si el Worker ha sido detenido o si el semáforo está en "R" (detenido)
             if (isStopped || semaforo == "R") {
                 println("Worker detenido por el semáforo")
                 return Result.failure()
             }
-
-            // Obtener la URL y la palabra clave de las preferencias compartidas
-            val url = sharedPreferences.getString("url", null) ?: return Result.failure()
-            val word = sharedPreferences.getString("word", null) ?: return Result.failure()
 
             // Conectar a la página web y obtener su contenido
             val doc = Jsoup.connect(url).get()

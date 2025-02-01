@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.entradas2.app-mergeDebugResources-37:/values-v23/values-v23.xml",
+            "outputFile": "com.example.entradas2.app-mergeDebugResources-36:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/home/andrea/.gradle/caches/8.9/transforms/d94319d027f48fcc9f10f03e66229914/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "/home/andrea/.gradle/caches/8.9/transforms/8e1a39e5b069b8cd67b52dfe16e184a2/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/home/andrea/.gradle/caches/8.9/transforms/ae1e8ad4dfa6515f08347f1ccbe3f600/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
+                    "source": "/home/andrea/.gradle/caches/8.9/transforms/8c5952c4b29bbc60a60a4d1095cf9143/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/home/andrea/.gradle/caches/8.9/transforms/56640ddb82f4678f7abe02943e4c658b/transformed/work-runtime-2.8.1/res/values-v23/values-v23.xml",
+                    "source": "/home/andrea/.gradle/caches/8.9/transforms/d5fd56cdc7ee9585f2e8f6a08b5a8be6/transformed/work-runtime-2.8.1/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -52,7 +52,7 @@
                     }
                 },
                 {
-                    "source": "/home/andrea/.gradle/caches/8.9/transforms/e1f767536ecbf7da4b94cae739a75816/transformed/material-1.12.0/res/values-v23/values-v23.xml",
+                    "source": "/home/andrea/.gradle/caches/8.9/transforms/8be94a688cace6466086a6628fecd333/transformed/material-1.12.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

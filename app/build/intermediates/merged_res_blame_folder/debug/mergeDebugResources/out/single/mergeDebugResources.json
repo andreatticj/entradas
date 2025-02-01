@@ -1,78 +1,74 @@
 [
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/raw_notificacion_personalizada.mp3.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/raw/notificacion_personalizada.mp3"
+        "merged": "com.example.entradas2.app-debug-38:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.entradas2.app-main-40:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.entradas2.app-debug-39:/layout_main_activity.xml.flat",
-        "source": "com.example.entradas2.app-main-41:/layout/main_activity.xml"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/xml_data_extraction_rules.xml.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/xml/data_extraction_rules.xml"
+        "merged": "com.example.entradas2.app-debug-38:/xml_backup_rules.xml.flat",
+        "source": "com.example.entradas2.app-main-40:/xml/backup_rules.xml"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/drawable_ic_launcher_background.xml.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/drawable/ic_launcher_background.xml"
+        "merged": "com.example.entradas2.app-debug-38:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.entradas2.app-main-40:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/layout_main_activity.xml.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/layout/main_activity.xml"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.example.entradas2.app-debug-38:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.entradas2.app-main-40:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.example.entradas2.app-debug-38:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.entradas2.app-main-40:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.entradas2.app-debug-38:/raw_notificacion_personalizada.mp3.flat",
+        "source": "com.example.entradas2.app-main-40:/raw/notificacion_personalizada.mp3"
     },
     {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/xml_backup_rules.xml.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-debug-39:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/home/andrea/.gradle/daemon/8.9/com.example.entradas2.app-main-41:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.entradas2.app-debug-38:/layout_main_activity.xml.flat",
+        "source": "com.example.entradas2.app-main-40:/layout/main_activity.xml"
     }
 ]
