@@ -5,6 +5,7 @@
     <!-- Permiso para acceder a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -20,7 +21,7 @@
         <activity android:name="com.example.entradas2.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Entradas2"
-            android:exported="true"> <!-- Asegúrate de añadir este atributo -->
+            android:exported="true">
 
             <!-- Filtro de intención para indicar que esta actividad es la principal -->
             <intent-filter>
@@ -29,6 +30,11 @@
             </intent-filter>
 
         </activity>
+
+        <!-- Receiver para manejar la acción de detener el Worker desde la notificación -->
+        <receiver
+            android:name=".NotificationReceiver"
+            android:exported="false" />
 
     </application>
 </manifest>
