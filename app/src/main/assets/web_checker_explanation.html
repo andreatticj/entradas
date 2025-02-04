@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicación de la Aplicación WebChecker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 800px;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        p, li {
+            color: #34495e;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", monospace;
+        }
+        ul, ol {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        strong {
+            color: #e74c3c;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Explicación de la Aplicación <span style="color:#e74c3c;">WebChecker</span></h1>
+    <p><strong>WebChecker</strong> permite monitorear una página web en busca de una palabra clave específica y notifica al usuario cuando la encuentra.</p>
+
+    <h2>Funcionamiento</h2>
+    <ol>
+        <li>El usuario ingresa una URL y una palabra clave en la interfaz de la aplicación.</li>
+        <li>Al presionar el botón <strong>Play</strong>, se inicia un <code>Worker</code> en segundo plano.</li>
+        <li>Este <code>Worker</code> usa la librería <code>Jsoup</code> para conectarse a la página web y buscar la palabra clave.</li>
+        <li>Si la palabra clave es encontrada, se genera una notificación.</li>
+        <li>El usuario puede detener la búsqueda presionando <strong>Stop</strong> o desde la notificación.</li>
+    </ol>
+
+    <h2>Tecnologías Utilizadas</h2>
+    <ul>
+        <li><strong>Android WorkManager</strong>: Para tareas en segundo plano.</li>
+        <li><strong>Jsoup</strong>: Para la extracción y análisis del contenido web.</li>
+        <li><strong>SharedPreferences</strong>: Para almacenar datos ingresados por el usuario.</li>
+        <li><strong>Notificaciones</strong>: Para alertar cuando se encuentra la palabra clave.</li>
+    </ul>
+
+    <h2>Interfaz de Usuario</h2>
+    <ul>
+        <li>Campo para ingresar la URL.</li>
+        <li>Campo para ingresar la palabra clave.</li>
+        <li>Botón <strong>Play</strong> para iniciar la búsqueda.</li>
+        <li>Botón <strong>Stop</strong> para detener la búsqueda.</li>
+    </ul>
+
+    <h2>Notificaciones</h2>
+    <p>Cuando se encuentra la palabra clave, se genera una notificación con la opción de detener la búsqueda.</p>
+
+    <h2>Código Relacionado</h2>
+    <ul>
+        <li><code>MainActivity.kt</code>: Configura la UI y gestiona <code>WorkManager</code>.</li>
+        <li><code>WebCheckerWorker.kt</code>: Ejecuta la tarea de fondo.</li>
+        <li><code>NotificationReceiver.kt</code>: Permite detener el Worker desde la notificación.</li>
+    </ul>
+</div>
+</body>
+</html>

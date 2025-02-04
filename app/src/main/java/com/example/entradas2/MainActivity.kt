@@ -3,6 +3,7 @@ package com.example.entradas2
 import android.Manifest
 import android.app.NotificationManager
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -66,6 +67,11 @@ class MainActivity : AppCompatActivity() {
         // Inicializar botones
         val btnPlay = findViewById<Button>(R.id.btnPlay)
         val btnStop = findViewById<Button>(R.id.btnStop)
+        val btnHelp = findViewById<Button>(R.id.btnHelp)
+        btnHelp.setOnClickListener {
+            val intent = Intent(this, WebViewActivity::class.java)
+            startActivity(intent)
+        }
 
         // Listener para el botón "Play"
         btnPlay.setOnClickListener {

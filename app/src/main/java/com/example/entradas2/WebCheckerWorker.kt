@@ -1,5 +1,6 @@
 package com.example.entradas2
 
+import android.R
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -16,34 +17,51 @@ import org.jsoup.Jsoup
  * en busca de una palabra clave específica. Si la palabra es encontrada, se envía
  * una notificación al usuario.
  */
-class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) :
+class WebCheckerWorker
+/**
+ * Constructor del Worker.
+ *
+ * @param appContext    Contexto de la aplicación.
+ * @param workerParams  Parámetros del Worker.
+ */
+    (appContext: Context, workerParams: WorkerParameters) :
     Worker(appContext, workerParams) {
-
+    /**
+     * Método que realiza el trabajo en segundo plano.
+     *
+     * @return Result.success() si se ejecuta correctamente, Result.failure() en caso de error o si el Worker es detenido.
+     */
     override fun doWork(): Result {
         try {
             // Obtener las preferencias compartidas para acceder a la URL, la palabra clave y el semáforo
+            val context = applicationContext
             val sharedPreferences =
-                applicationContext.getSharedPreferences("WebCheckerPrefs", Context.MODE_PRIVATE)
-            val semaforo = sharedPreferences.getString("semaforo", null) ?: return Result.failure()
+                context.getSharedPreferences("WebCheckerPrefs", Context.MODE_PRIVATE)
+            val semaforo = sharedPreferences.getString("semaforo", null)
+
 
             // Verificar si el Worker ha sido detenido o si el semáforo está en "R" (detenido)
-            if (isStopped || semaforo == "R") {
+            if (isStopped || "R" == semaforo) {
                 println("Worker detenido por el semáforo")
                 return Result.failure()
             }
 
             // Obtener la URL y la palabra clave de las preferencias compartidas
-            val url = sharedPreferences.getString("url", null) ?: return Result.failure()
-            val word = sharedPreferences.getString("word", null) ?: return Result.failure()
+            val url = sharedPreferences.getString("url", null)
+            val word = sharedPreferences.getString("word", null)
+
+            if (url == null || word == null) {
+                return Result.failure()
+            }
 
             // Conectar a la página web y obtener su contenido
             val doc = Jsoup.connect(url).get()
-            if (isStopped || semaforo == "R") {
+            if (isStopped || "R" == semaforo) {
                 return Result.failure()
             }
 
             // Verificar si la palabra clave está presente en el contenido de la página
-            if (doc.text().contains(word, ignoreCase = true)) {
+            if (doc.text().contains(word)) {
                 sendNotification() // Enviar notificación si la palabra es encontrada
             }
         } catch (e: Exception) {
@@ -54,7 +72,7 @@ class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) :
     }
 
     /**
-     * Envía una notificación al usuario indicando que la palabra clave fue encontrada.
+     * Envía una notificación al usuario indicando que la palabra clave fue encontrada en la página web.
      */
     private fun sendNotification() {
         val context = applicationContext
@@ -62,9 +80,11 @@ class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) :
             context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         // Crear un Intent para detener el Worker cuando el usuario presione la notificación
-        val stopIntent = Intent(context, NotificationReceiver::class.java).apply {
-            action = "STOP_WORK"
-        }
+        val stopIntent = Intent(
+            context,
+            NotificationReceiver::class.java
+        )
+        stopIntent.setAction("STOP_WORK")
         val stopPendingIntent = PendingIntent.getBroadcast(
             context,
             0,
@@ -78,9 +98,8 @@ class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) :
                 "guestlist_channel",
                 "Guestlist Notification",
                 NotificationManager.IMPORTANCE_HIGH
-            ).apply {
-                description = "Canal para notificaciones de palabras encontradas"
-            }
+            )
+            channel.description = "Canal para notificaciones de palabras encontradas"
             notificationManager.createNotificationChannel(channel)
         }
 
@@ -88,13 +107,12 @@ class WebCheckerWorker(appContext: Context, workerParams: WorkerParameters) :
         val notification = NotificationCompat.Builder(context, "guestlist_channel")
             .setContentTitle("¡Se encontró la palabra!")
             .setContentText("La palabra fue encontrada en la página web.")
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(R.drawable.ic_dialog_info)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setAutoCancel(true)
-            .addAction(android.R.drawable.ic_delete, "Detener", stopPendingIntent)
-            .build()
+            .addAction(R.drawable.ic_delete, "Detener", stopPendingIntent)
 
         // Mostrar la notificación
-        notificationManager.notify(1, notification)
+        notificationManager.notify(1, notification.build())
     }
 }
